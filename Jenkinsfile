@@ -3,12 +3,12 @@ pipeline {
      stages {
           stage("Compile") {
                steps {
-                    sh " /opt/apache-maven-3.9.6/bin compile"
+                    bat "/opt/apache-maven-3.9.6/bin compile"
                }
           }
           stage("Unit test") {
                steps {
-                    sh " /opt/apache-maven-3.9.6/bin test"
+                    bat "/opt/apache-maven-3.9.6/bin test"
                }
           }
      
