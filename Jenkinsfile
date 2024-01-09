@@ -8,14 +8,14 @@ pipeline {
           }
           stage("Unit test") {
                steps {
-                    sh "/opt/apache-maven-3.9.6/bin test"
+                    sh "/opt/apache-maven-3.9.6/bin/mvn test"
                }
           }
      
     
 stage("Package") {
      steps {
-          sh " /opt/apache-maven-3.9.6/bin package"
+          sh " /opt/apache-maven-3.9.6/bin/mvn package"
      }
 }
 stage("Docker build") {
